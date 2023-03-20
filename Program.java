@@ -7,6 +7,8 @@ import java.util.Random;
 // void step(); и String getInfo(); Реализовать имнтерфейс в абстрактном классе. Создать два списка в классе main. В каждый из списков добавить по десять 
 // экземнляров наследников абстрактноuj классf. Реализовать метод step() таким образом, чтобы они отображали типы персонажей.
 
+
+
 public class Program {
     public static void main(String[] args) {
 
@@ -18,19 +20,19 @@ public class Program {
         for (int i = 0; i < 10; i++) {
             switch (random.nextInt(3)) {
                 case 0:
-                    list1.add(new Peasant("Амар", 50, 10, 10));
+                    list1.add(new Peasant("Амар", 50, 10, 10, 23, 21));
                     break;
                 // case 0:
                 //     list.add(new XBowMan(getName()));
                 //     break;
                 case 1:
-                    list1.add(new Robber("Ко", 10, 20, 40, 60, 65, 23));
+                    list1.add(new Robber("Ко", 10, 20, 40, 60, 65, 23, random.nextInt(16), random.nextInt(32)));
                     break;
                 case 2:
-                    list1.add(new SniperHero("Кларк", 50, 40, 20,24, 40, 45));
+                    list1.add(new SniperHero("Кларк", 50, 40, 20,24, 40, 45, random.nextInt(16), random.nextInt(32)));
                     break;
                 case 3:
-                    list1.add(new Magician("Мармар", 30, 14, 5, 10, 34));
+                    list1.add(new Magician("Мармар", 30, 14, 5, 10, 34, random.nextInt(16), random.nextInt(32)));
                     break;
                 // default:
                 //     list.add(new Sniper(getName()));
@@ -38,19 +40,19 @@ public class Program {
             }
             switch (random.nextInt(4)) {
                 case 0:
-                    list2.add(new Peasant("Монтар", 40, 20, 10));
+                    list2.add(new Peasant("Монтар", 40, 20, 10, random.nextInt(16), random.nextInt(32)));
                     break;
                 // case 0:
                 //     list.add(new XBowMan(getName()));
                 //     break;
                 case 1:
-                    list2.add(new Spearman("Монтар", 40, 20, 14,10));
+                    list2.add(new Spearman("Монтар", 40, 20, 14, 24, random.nextInt(16), random.nextInt(32)));
                     break;
                 case 2:
-                    list2.add(new Crossbowman("Шаиа", 23, 21, 43, 34, 23, 12));
+                    list2.add(new Crossbowman("Шаиа", 23, 21, 43, 24, 23, 12, random.nextInt(16), random.nextInt(32)));
                     break;
                 case 3:
-                    list2.add(new Monk("Мана", 23, 21, 34));
+                    list2.add(new Monk("Мана", 23, 21, 34, random.nextInt(16), random.nextInt(32)));
                     break;
                 // case 0:
                 //     list2.add(new XBowMan(getName()));
@@ -80,15 +82,32 @@ public class Program {
         });
 
         for (BaseHero hero : allUnits) {
-            System.out.println(hero.getInfo() + " " + hero.getName() + " HP: " + hero.getHp() + ", Speed: " + hero.getSpeed());
+            System.out.printf(hero.getInfo() + " " + hero.getName() + " HP: " + hero.getHp() + ", Speed: " + hero.getSpeed() + 
+            ", Position: " + "x: %d, y: %d\n", hero.position.x, hero.position.y);
         }
 
         System.out.println("\n");
 
         list1.forEach(u -> u.step(list2, list1));
+
+        // int count = 1;
+        // for (BaseHero unit : list1) {
+        //     unit.position.x=1;
+        //     unit.position.y = count;
+        //     count++;
+        // }
+
+        // count = 1;
+        // for (BaseHero unit : list2) {
+        //     unit.position.x=10;
+        //     unit.position.y = count;
+        //     count++;
+        // }
+
+        // for (BaseHero unit : list1) {
+        //     System.out.printf("%d, %d\n", unit.position.x, unit.position.y);
+        // }   
     }
-
-
         // for (int i = 0; i < teamCount; i++) {
         //     int val = rand.nextInt(5);
         //     switch (val) {

@@ -10,8 +10,8 @@ public class Priest extends BaseHero {
     //     this.elixir = maxElixir;
     // }
 
-    public Priest(String name, float hp, int speed, int damage, int elixir, int maxElixir) {
-        super(name, hp, speed, damage);
+    public Priest(String name, float hp, int speed, int damage, int elixir, int maxElixir, int x, int y) {
+        super(name, hp, speed, damage, x, y);
         this.elixir = elixir;
         this.maxElixir = maxElixir;
     }

@@ -10,8 +10,8 @@ public class Robber extends InfantClass {
     //     this.ammo = maxAmmo;
     // }
 
-    public Robber(String name, float hp, int speed, int damage, int stamina, int poisons, int maxPoisons) {
-        super(name, hp, speed, damage, stamina);
+    public Robber(String name, float hp, int speed, int damage, int stamina, int poisons, int maxPoisons,  int x, int y) {
+        super(name, hp, speed, damage, stamina, x, y);
         this.poisons = poisons;
         this.maxPoisons = maxPoisons;
     }

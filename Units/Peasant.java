@@ -1,7 +1,7 @@
 public class Peasant extends BaseHero{
 
-    public Peasant(String name, float hp, int speed, int damage) {
-        super(name, hp, speed, damage);
+    public Peasant(String name, float hp, int speed, int damage, int x, int y) {
+        super(name, hp, speed, damage, x, y);
     }
 
     @Override

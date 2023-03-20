@@ -1,8 +1,8 @@
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
 public class Spearman extends ShooterClass {
-    public Spearman(String name, float hp, int speed, int damage, int arrows) {
-        super(name, hp, speed, damage, arrows);
+    public Spearman(String name, float hp, int speed, int damage, int arrows, int x, int y) {
+        super(name, hp, speed, damage, arrows, x, y);
     }
 
     @Override

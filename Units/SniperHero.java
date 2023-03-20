@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
 public class SniperHero extends ShooterClass {
 
@@ -12,8 +12,8 @@ public class SniperHero extends ShooterClass {
     //     this.ammo = maxAmmo;
     // }
 
-    public SniperHero(String name, float hp, int speed, int damage, int arrows, int ammo, int maxAmmo) {
-        super(name, hp, speed, damage, arrows);
+    public SniperHero(String name, float hp, int speed, int damage, int arrows, int ammo, int maxAmmo, int x, int y) {
+        super(name, hp, speed, damage, arrows, x , y);
         this.ammo = ammo;
         this.maxAmmo = maxAmmo;
     }

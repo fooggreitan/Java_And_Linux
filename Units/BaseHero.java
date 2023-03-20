@@ -11,6 +11,7 @@ public abstract class BaseHero implements UnitInterface {
     protected int speed;
     protected int maxHp;
     protected int damage;
+    protected Position position;
     // protected final String NAME; 
 
     // static {
@@ -22,11 +23,12 @@ public abstract class BaseHero implements UnitInterface {
     //     System.out.println(NAME);
     // }
 
-    public BaseHero(String name, float hp, int speed, int damage) {
+    public BaseHero(String name, float hp, int speed, int damage, int x, int y) {
         this.name = name;
         this.hp = hp;
         this.speed = speed;
         this.damage = damage;
+        position = new Position(x, y);
         // this.maxHp = hp;
     }
 

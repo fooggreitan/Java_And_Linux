@@ -10,8 +10,8 @@ public class Magician extends BaseHero {
     //     this.mana = maxMana;
     // }
 
-    public Magician(String name, float hp, int speed, int damage, int mana, int maxMana) {
-        super(name, hp, speed, damage);
+    public Magician(String name, float hp, int speed, int damage, int mana, int maxMana,  int x, int y) {
+        super(name, hp, speed, damage, x, y);
         this.mana = mana;
         this.maxMana = maxMana;
     }

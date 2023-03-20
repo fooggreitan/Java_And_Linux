@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
-import javax.swing.text.AbstractDocument.BranchElement;
+// import javax.swing.text.AbstractDocument.BranchElement;
 
 public abstract class ShooterClass extends BaseHero{
     
    int arrows; 
 
-    public ShooterClass(String name, float hp, int speed, int damage, int arrows) {
-        super(name, hp, speed, damage);
+    public ShooterClass(String name, float hp, int speed, int damage, int arrows,  int x, int y) {
+        super(name, hp, speed, damage, x , y);
         this.arrows = arrows;
     }
 
@@ -23,12 +23,12 @@ public abstract class ShooterClass extends BaseHero{
                     if(unit.hp > 0) {
                         System.out.println("Могу стрелять!");
                         this.attack(unit, this.damage);
-                        // this.arrows--;
                         // System.out.println(toString());
                         break;
                     }
                     else {
-                        System.out.println("Нет жизни!");
+                        System.out.printf("Нет жизни!");
+                        return;
                     }
                 }
             }
@@ -44,12 +44,14 @@ public abstract class ShooterClass extends BaseHero{
         for (BaseHero unit : friends) {
             if (unit.getInfo().equals("Peasant")) {
                 // this.arrows++;
+                this.arrows--;
                 break;
             }
-            this.arrows--;
         }
 
         System.out.println(toString());
+
+        System.out.println("-------");
     }
 
     @Override
