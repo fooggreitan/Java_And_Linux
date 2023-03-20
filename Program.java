@@ -11,12 +11,12 @@ public class Program {
     public static void main(String[] args) {
 
         // Random rand = new Random();
-
+        Random random = new Random();
         ArrayList<BaseHero> list1 = new ArrayList<>();
         ArrayList<BaseHero> list2 = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            switch (new Random().nextInt(3)) {
+            switch (random.nextInt(3)) {
                 case 0:
                     list1.add(new Peasant("Амар", 50, 10, 10));
                     break;
@@ -36,7 +36,7 @@ public class Program {
                 //     list.add(new Sniper(getName()));
                 //     break;
             }
-            switch (new Random().nextInt(4)) {
+            switch (random.nextInt(4)) {
                 case 0:
                     list2.add(new Peasant("Монтар", 40, 20, 10));
                     break;
