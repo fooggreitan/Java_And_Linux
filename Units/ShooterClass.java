@@ -20,15 +20,14 @@ public abstract class ShooterClass extends BaseHero{
                     continue; // Пропускаем "Peasant" и переходим к следующему персонажу команды.
                 }
                 else {
-                    if(unit.hp > 0) {
+                    if (unit.hp <= 0) {
+                        continue; // Пропускаем уже мертвых персонажей и переходим к следующему персонажу команды.
+                    }
+                    else if(unit.hp > 0) {
                         System.out.println("Могу стрелять!");
                         this.attack(unit, this.damage);
                         // System.out.println(toString());
                         break;
-                    }
-                    else {
-                        System.out.printf("Нет жизни!");
-                        return;
                     }
                 }
             }

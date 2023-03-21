@@ -2,12 +2,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Random;
 
-
 // Добавить файл с описанием интерфейса. В котором описать два метода, 
 // void step(); и String getInfo(); Реализовать имнтерфейс в абстрактном классе. Создать два списка в классе main. В каждый из списков добавить по десять 
 // экземнляров наследников абстрактноuj классf. Реализовать метод step() таким образом, чтобы они отображали типы персонажей.
-
-
 
 public class Program {
     public static void main(String[] args) {
