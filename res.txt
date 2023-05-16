@@ -1,0 +1,1 @@
+Prizent [ID=2, name=Молния Маквин, count=10, probabilityLoss=50%]
